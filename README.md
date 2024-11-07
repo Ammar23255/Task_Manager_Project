@@ -35,7 +35,7 @@ Follow the steps below to set up the Task Manager API locally:
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/your-username/task-manager.git](https://github.com/Ammar23255/Task_Manager_Project.git)
+git clone https://github.com/Ammar23255/Task_Manager_Project.git
 ```
 
 ### 2. Install dependencies
