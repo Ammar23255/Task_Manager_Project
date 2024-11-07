@@ -35,7 +35,7 @@ Follow the steps below to set up the Task Manager API locally:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/task-manager.git
+git clone [https://github.com/your-username/task-manager.git](https://github.com/Ammar23255/Task_Manager_Project.git)
 ```
 
 ### 2. Install dependencies
@@ -51,11 +51,9 @@ npm install
 Create a `.env` file in the root of your project and add the following:
 
 ```plaintext
-MONGODB_URI=your_mongo_connection_string
-PORT=3001
+ PORT=3001
+ MONGODB_URI=mongodb+srv://ahmedammaraa12aa:23255176Aa@cluster0.aly3w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 ```
-
-Replace `your_mongo_connection_string` with your MongoDB connection URI.
 
 ### 4. Start the application
 
