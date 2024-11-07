@@ -274,36 +274,6 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 
 ---
 
-## Authentication (Optional)
-
-1. **Sign Up Endpoint**
-   - **Method**: `POST`
-   - **URL**: `/auth/signup`
-   - **Request Body**:
-   ```json
-   {
-       "username": "username",
-       "email": "email@example.com",
-       "password": "password123"
-   }
-   ```
-
-2. **Login Endpoint**
-   - **Method**: `POST`
-   - **URL**: `/auth/login`
-   - **Request Body**:
-   ```json
-   {
-       "email": "email@example.com",
-       "password": "password123"
-   }
-   ```
-
-3. **Protected Routes**
-   - All task-related routes can be protected, requiring the user to be logged in.
-
----
-
 ## Error Codes
 
 - **400 Bad Request**: The request was malformed or missing required fields.
@@ -318,7 +288,7 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Ammar23255/Task_Manager_Project.git
    ```
 
 2. **Install dependencies**:
@@ -328,7 +298,8 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 
 3. **Create a `.env` file** in the root of the project:
    ```env
-   MONGODB_URI=mongodb://localhost:27017/taskmanager
+   MONGODB_URI=mongodb+srv://ahmedammaraa12aa:23255176Aa@cluster0.aly3w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+    PORT=3001
    ```
 
 4. **Run the server**:
