@@ -3,7 +3,7 @@
 
 ## Overview
 
-This is a simple Task Manager API built with Node.js and MongoDB that allows users to perform CRUD operations on tasks, such as creating, reading, updating, deleting, and managing task statuses (completed or incomplete).
+This is a simple Task Manager API built with Node.js, Express, and MongoDB that allows users to perform CRUD operations on tasks, such as creating, reading, updating, deleting, and managing task statuses (completed or incomplete).
 
 ---
 
@@ -12,7 +12,7 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 ### 1. Create a Task
 
 - **Method**: `POST`
-- **URL**: `/tasks`
+- **URL**: `/api/tasks`
 - **Description**: Creates a new task.
 
 #### Request Body:
@@ -48,7 +48,7 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 ### 2. Get All Tasks
 
 - **Method**: `GET`
-- **URL**: `/tasks`
+- **URL**: `/api/tasks`
 - **Description**: Retrieves all tasks.
 
 #### Response:
@@ -78,7 +78,7 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 ### 3. Get a Task by ID
 
 - **Method**: `GET`
-- **URL**: `/tasks/:id`
+- **URL**: `/api/tasks/:id`
 - **Description**: Retrieves a task by its unique ID.
 
 #### Response:
@@ -113,7 +113,7 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 ### 4. Update a Task by ID
 
 - **Method**: `PUT`
-- **URL**: `/tasks/:id`
+- **URL**: `/api/tasks/:id`
 - **Description**: Updates an existing task by its ID.
 
 #### Request Body:
@@ -163,7 +163,7 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 ### 5. Delete a Task by ID
 
 - **Method**: `DELETE`
-- **URL**: `/tasks/:id`
+- **URL**: `/api/tasks/:id`
 - **Description**: Deletes a task by its ID.
 
 #### Response:
@@ -192,8 +192,8 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 
 ### 6. Mark Task as Completed/Incompleted
 
-- **Method**: `PUT`
-- **URL**: `/tasks/:id/completed`
+- **Method**: `PATCH`
+- **URL**: `/api/tasks/:id/completed`
 - **Description**: Allows you to mark a task as completed or incomplete.
 
 #### Request Body:
@@ -244,7 +244,7 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 ### 7. Filter Tasks by Status (Optional)
 
 - **Method**: `GET`
-- **URL**: `/tasks?completed=true` or `/tasks?completed=false`
+- **URL**: `/api/tasks/status/true` or `/api/tasks/status/false`
 - **Description**: Retrieves tasks based on their completed status.
 
 #### Query Parameters:
@@ -272,38 +272,6 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 }
 ```
 
----
-
-## Authentication (Optional)
-
-1. **Sign Up Endpoint**
-   - **Method**: `POST`
-   - **URL**: `/auth/signup`
-   - **Request Body**:
-   ```json
-   {
-       "username": "username",
-       "email": "email@example.com",
-       "password": "password123"
-   }
-   ```
-
-2. **Login Endpoint**
-   - **Method**: `POST`
-   - **URL**: `/auth/login`
-   - **Request Body**:
-   ```json
-   {
-       "email": "email@example.com",
-       "password": "password123"
-   }
-   ```
-
-3. **Protected Routes**
-   - All task-related routes can be protected, requiring the user to be logged in.
-
----
-
 ## Error Codes
 
 - **400 Bad Request**: The request was malformed or missing required fields.
@@ -318,7 +286,7 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Ammar23255/Task_Manager_Project.git
    ```
 
 2. **Install dependencies**:
@@ -333,7 +301,7 @@ This is a simple Task Manager API built with Node.js and MongoDB that allows use
 
 4. **Run the server**:
    ```bash
-   npm start
+   npm run dev
    ```
 
 5. **Test API Endpoints**:
