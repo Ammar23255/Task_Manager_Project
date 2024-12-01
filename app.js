@@ -1,22 +1,15 @@
-// app.js
-
-// Importing required packages
 const express = require('express');
 const dotenv = require('dotenv');
+const taskRoutes = require("./routes/taskRoutes");
+const connectDB = require("./config/db");
 
-// Load environment variables from .env file
 dotenv.config();
+connectDB();
 
-// Create an instance of an Express app
 const app = express();
 
-// Middleware to parse JSON requests
 app.use(express.json());
 
-// Simple test route
-app.get('/', (req, res) => {
-    res.send('Welcome to the Task Manager API');
-});
+app.use('/api', taskRoutes);
 
 module.exports = app;
-

@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Define the task schema
 const taskSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -12,13 +11,12 @@ const taskSchema = new mongoose.Schema({
     },
     completed: {
         type: Boolean,
-        default: false, // Field to track task completion status
+        default: false,
     },
 }, {
-    timestamps: true, // Automatically adds createdAt and updatedAt fields
+    timestamps: true,
 });
 
-// Create the Task model
 const Task = mongoose.model('Task', taskSchema);
 
 module.exports = Task;
