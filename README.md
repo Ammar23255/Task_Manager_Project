@@ -62,7 +62,7 @@ Replace `your_mongo_connection_string` with your MongoDB connection URI.
 Run the following command to start the server:
 
 ```bash
-npm start
+npm run dev
 ```
 
 The server will start on port `3001` by default.
@@ -75,7 +75,7 @@ The Task Manager API follows RESTful principles. Below are the available endpoin
 
 ### 1. Create a Task
 
-- **POST** `/tasks`
+- **POST** `/api/tasks`
 - **Request Body**:
 ```json
 {
@@ -86,15 +86,15 @@ The Task Manager API follows RESTful principles. Below are the available endpoin
 
 ### 2. Get All Tasks
 
-- **GET** `/tasks`
+- **GET** `/api/tasks`
 
 ### 3. Get a Task by ID
 
-- **GET** `/tasks/:id`
+- **GET** `/api/tasks/:id`
 
 ### 4. Update a Task by ID
 
-- **PUT** `/tasks/:id`
+- **PUT** `/api/tasks/:id`
 - **Request Body**:
 ```json
 {
@@ -105,7 +105,7 @@ The Task Manager API follows RESTful principles. Below are the available endpoin
 
 ### 5. Delete a Task by ID
 
-- **DELETE** `/tasks/:id`
+- **DELETE** `/api/tasks/:id`
 
 For more details on the API, check the [API Documentation](./API_Documentation.md).
 
